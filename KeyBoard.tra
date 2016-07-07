@@ -1,0 +1,39 @@
+*** Creating Trace Output File 'KeyBoard.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"main.o"'
+### List of Objects: adding '"spioutfunc.o"'
+### List of Objects: adding '"spioutprotocol.o"'
+### List of Objects: adding '"xy_key_scan_func.o"'
+### List of Objects: adding '"uart0.o"'
+### List of Objects: adding '"uart1.o"'
+### List of Objects: adding '"uart_fifo.o"'
+### List of Objects: adding '"uartprotocol.o"'
+### List of Objects: adding '"debug_frmwrk.o"'
+### List of Objects: adding '"lpc12xx_gpio.o"'
+### List of Objects: adding '"lpc12xx_iocon.o"'
+### List of Objects: adding '"lpc12xx_libcfg_default.o"'
+### List of Objects: adding '"lpc12xx_sysctrl.o"'
+### List of Objects: adding '"lpc12xx_timer16.o"'
+### List of Objects: adding '"lpc12xx_uart.o"'
+### List of Objects: adding '"lpc12xx_wdt.o"'
+### List of Objects: adding '"core_cm0.o"'
+### List of Objects: adding '"startup_lpc12xx.o"'
+### List of Objects: adding '"system_lpc12xx.o"'
+### List of Objects: adding '"t1.o"'
+### List of Objects: adding '"t0.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M0 "main.o" "spioutfunc.o" "spioutprotocol.o" "xy_key_scan_func.o" "uart0.o" "uart1.o" "uart_fifo.o" "uartprotocol.o" "debug_frmwrk.o" "lpc12xx_gpio.o" "lpc12xx_iocon.o" "lpc12xx_libcfg_default.o" "lpc12xx_sysctrl.o" "lpc12xx_timer16.o" "lpc12xx_uart.o" "lpc12xx_wdt.o" "core_cm0.o" "startup_lpc12xx.o" "system_lpc12xx.o" "t1.o" "t0.o" --strict --scatter "KeyBoard.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Obj\KeyBoard.map" -o "KeyBoard.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'KeyBoard.axf'
+### ADS-LD Command File: 'KeyBoard.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'KeyBoard.lnp', Handle=0x0000079C
+### Writing '.lnp' file
+### ADS-LD Command file 'KeyBoard.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

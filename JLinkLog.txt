@@ -1,0 +1,24 @@
+
+T0FEC 000:365 SEGGER J-Link V4.28 Log File (0000ms, 0363ms total)
+T0FEC 000:365 DLL Compiled: Jun 16 2011 17:41:05 (0000ms, 0363ms total)
+T0FEC 000:365 Logging started @ 2011-08-31 08:40 (0000ms, 0363ms total)
+T0FEC 000:365 JLINK_SetWarnOutHandler(...) (0000ms, 0363ms total)
+T0FEC 000:365 JLINK_OpenEx(...)
+Firmware: J-Link ARM V8 compiled Jun 16 2011 14:52:53
+Hardware: V8.00
+S/N: 20100214
+Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFull  returns O.K. (0067ms, 0363ms total)
+T0FEC 000:432 JLINK_SetErrorOutHandler(...) (0000ms, 0430ms total)
+T0FEC 000:432 JLINK_ExecCommand("ProjectFile = "E:\Keyboard\Branches\com_pro_v1_6\JLinkSettings.ini"", ...)  returns 0x00 (0000ms, 0430ms total)
+T0FEC 000:434 JLINK_ExecCommand("DisableConnectionTimeout", ...)  returns 0x00 (0000ms, 0430ms total)
+T0FEC 000:436 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0004ms, 0430ms total)
+T0FEC 000:443 JLINK_SetSpeed(2000) (0003ms, 0434ms total)
+T0FEC 000:446 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 0437ms total)
+T0FEC 000:446 JLINK_GetDLLVersion()  returns 42800 (0000ms, 0437ms total)
+T0FEC 000:446 JLINK_GetFirmwareString(...) (0000ms, 0437ms total)
+T0FEC 000:448 JLINK_GetDLLVersion()  returns 42800 (0000ms, 0437ms total)
+T0FEC 000:448 JLINK_GetCompileDateTime() (0000ms, 0437ms total)
+T0FEC 000:448 JLINK_GetFirmwareString(...) (0000ms, 0437ms total)
+T0FEC 000:449 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 0437ms total)
+T0FEC 000:455 JLINK_GetId() >0x108 TIF> >0x108 TIF> >0x108 TIF> >0x108 TIF>CPU core not found.  returns 0x00000000 (0022ms, 0437ms total)
+T0FEC 004:796 JLINK_Close() (0031ms, 0459ms total)

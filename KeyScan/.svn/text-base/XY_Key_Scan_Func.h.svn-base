@@ -1,0 +1,17 @@
+#ifndef _XY_KEY_SCAN_FUNC_INCLUDE_
+#define _XY_KEY_SCAN_FUNC_INCLUDE_
+
+#include <stdint.h>
+#include <lpc12xx_gpio.h>
+#include "XY_Key_Scan_Def.h"
+
+//按键状态改变标志
+extern volatile uint8_t c_KeyChanged;
+//按键状态
+extern volatile uint8_t c_InputValue[N_SCAN_ROWS];
+
+void XY_Key_Scan(void);
+uint8_t ClearShakeDo(uint8_t *cValue, uint8_t *cLast, uint8_t cCurrent);
+void KeyScanInit(void);
+
+#endif //_XY_KEY_SCAN_FUNC_INCLUDE_

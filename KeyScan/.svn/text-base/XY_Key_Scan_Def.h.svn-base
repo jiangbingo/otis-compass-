@@ -1,0 +1,55 @@
+#ifndef _XY_KEY_SCAN_DEF_INCLUDE_
+#define _XY_KEY_SCAN_DEF_INCLUDE_
+
+#include <lpc12xx_gpio.h>
+#define N_SCAN_ROWS 4
+
+//				COL 1 1-5	COL 2 0-4	COL 3 0-5
+// ROW 1 1-4		1			2			3
+// ROW 2 1-3		4			5			6
+// ROW 3 0-10		7			8			9
+// ROW 4 0-11		-			0			A
+
+//设置键盘扫描IO口的方向
+#define KEY_SCAN_SET_PIN_DIR GPIO_SetDir(LPC_GPIO1, 3, 1);	\
+							 GPIO_SetDir(LPC_GPIO1, 4, 1);	\
+							 GPIO_SetDir(LPC_GPIO0, 10, 1);	\
+							 GPIO_SetDir(LPC_GPIO0, 11, 1);	\
+							 GPIO_SetDir(LPC_GPIO1, 5, 0);	\
+							 GPIO_SetDir(LPC_GPIO0, 4, 0);	\
+							 GPIO_SetDir(LPC_GPIO0, 5, 0);
+
+//扫描第一行的IO口输出
+#define KEY_SCAN_SET_ROW1 GPIO_SetDir(LPC_GPIO1, 3, 0);	\
+						  GPIO_SetDir(LPC_GPIO0, 10, 0); \
+						  GPIO_SetDir(LPC_GPIO0, 11, 0); \
+						  GPIO_SetDir(LPC_GPIO1, 4, 1);	\
+						  GPIO_SetLowLevel(LPC_GPIO1, 4, 1);
+
+//扫描第二行的IO口输出
+#define KEY_SCAN_SET_ROW2 GPIO_SetDir(LPC_GPIO1, 4, 0);	\
+						  GPIO_SetDir(LPC_GPIO0, 10, 0); \
+						  GPIO_SetDir(LPC_GPIO0, 11, 0); \
+						  GPIO_SetDir(LPC_GPIO1, 3, 1);	\
+						  GPIO_SetLowLevel(LPC_GPIO1, 3, 1);
+
+//扫描第三行的IO口输出
+#define KEY_SCAN_SET_ROW3 GPIO_SetDir(LPC_GPIO1, 4, 0);	\
+						  GPIO_SetDir(LPC_GPIO1, 3, 0);	\
+						  GPIO_SetDir(LPC_GPIO0, 11, 0); \
+						  GPIO_SetDir(LPC_GPIO0, 10, 1); \
+						  GPIO_SetLowLevel(LPC_GPIO0, 10, 1);
+
+//扫描第四行的IO口输出
+#define KEY_SCAN_SET_ROW4 GPIO_SetDir(LPC_GPIO1, 4, 0);	\
+						  GPIO_SetDir(LPC_GPIO1, 3, 0);	\
+						  GPIO_SetDir(LPC_GPIO0, 10, 0); \
+						  GPIO_SetDir(LPC_GPIO0, 11, 1); \
+						  GPIO_SetLowLevel(LPC_GPIO0, 11, 1);
+
+//读取扫描列值
+#define KEY_SCAN_GET_COLS ((GPIO_GetPinValue(LPC_GPIO1, 5) << 2)	| \
+						   (GPIO_GetPinValue(LPC_GPIO0, 4) << 1)	| \
+						   (GPIO_GetPinValue(LPC_GPIO0, 5)))
+
+#endif
